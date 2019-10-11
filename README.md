@@ -12,20 +12,20 @@ This is an implementation of smart pointers in C. Pointers use reference countin
 ## Documentation
 ```
 void *smart_malloc(size_t size)
-```
     - Returns a memory region (like normal malloc)
 
 ```
-void smart_free(void *ptr)
 ```
+void smart_free(void *ptr)
     - Frees a memory region
     - If reference counts still exist for the region, "free" will not be called
 
 ```
-void *smart_calloc(size_t nmemb, size_t size)
 ```
+void *smart_calloc(size_t nmemb, size_t size)
     - Returns a memory region zeroed out (like normal calloc)
 
+```
 ```
 void *smart_realloc(void *ptr, size_t size)
     - Returns a memory region to a new location (like normal realloc)
@@ -33,11 +33,11 @@ void *smart_realloc(void *ptr, size_t size)
 ```
 ```
 void *smart_reference(void *ptr)
-```
     - Add new reference count to smart pointer
 
 ```
-void *smart_catchpointer(void *ptr)
 ```
+void *smart_catchpointer(void *ptr)
     - Catch up to latest pointer given a non-free'd pointer
     - Prevents problem of calling realloc and forgetting to update another pointer to new address
+```
