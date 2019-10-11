@@ -28,10 +28,9 @@ void *smart_calloc(size_t nmemb, size_t size)
 
 ```
 void *smart_realloc(void *ptr, size_t size)
-```
     - Returns a memory region to a new location (like normal realloc)
     - Calls smart_free on ptr
-
+```
 ```
 void *smart_reference(void *ptr)
 ```
